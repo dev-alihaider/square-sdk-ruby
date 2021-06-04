@@ -1,0 +1,45 @@
+
+# Submit Evidence Response
+
+Defines the fields in a `SubmitEvidence` response.
+
+## Structure
+
+`Submit Evidence Response`
+
+## Fields
+
+| Name | Type | Tags | Description |
+|  --- | --- | --- | --- |
+| `errors` | [`Array<Error Hash>`](/doc/models/error.md) | Optional | Information about errors encountered during the request. |
+| `dispute` | [`Dispute Hash`](/doc/models/dispute.md) | Optional | Represents a dispute a cardholder initiated with their bank. |
+
+## Example (as JSON)
+
+```json
+{
+  "dispute": {
+    "amount_money": {
+      "amount": 2000,
+      "currency": "USD"
+    },
+    "brand_dispute_id": "100000399240",
+    "card_brand": "VISA",
+    "created_at": "2018-10-18T16:02:15.313Z",
+    "dispute_id": "EAZoK70gX3fyvibecLwIGB",
+    "disputed_payments": [
+      {
+        "payment_id": "2yeBUWJzllJTpmnSqtMRAL19taB"
+      }
+    ],
+    "due_at": "2018-11-01T00:00:00.000Z",
+    "evidence_ids": [
+      "CKWRhnZN0eMSUbh38BKmD"
+    ],
+    "reason": "NO_KNOWLEDGE",
+    "state": "PROCESSING",
+    "updated_at": "2018-10-18T16:02:15.313Z"
+  }
+}
+```
+
